@@ -1,0 +1,152 @@
+[
+  {
+    "postTitle": "The Benefits of Journaling",
+    "postDesc": "Discover the power of writing down your thoughts",
+    "postAuthor": "David Kim",
+    "comments": [
+      {
+        "name": "Emily Patel",
+        "comment": "Love this post! Journaling has helped me process my emotions"
+      },
+      {
+        "name": "Kevin White",
+        "comment": "Great article, thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "postTitle": "The Top 5 Time Management Tools",
+    "postDesc": "Get more done with these essential tools",
+    "postAuthor": "Sarah Taylor",
+    "comments": [
+      {
+        "name": "John Lee",
+        "comment": "Awesome list! Trello is my favorite tool"
+      },
+      {
+        "name": "Emily Wong",
+        "comment": "Great recommendations, thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "postTitle": "The Importance of Self-Reflection",
+    "postDesc": "Why reflecting on your actions is crucial for growth",
+    "postAuthor": "Kevin Brown",
+    "comments": [
+      {
+        "name": "Mike Davis",
+        "comment": "So true! Self-reflection has helped me learn from my mistakes"
+      },
+      {
+        "name": "Jane Wilson",
+        "comment": "Great article, thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "postTitle": "The Benefits of Mindfulness",
+    "postDesc": "Discover the power of being present in the moment",
+    "postAuthor": "Emily Chen",
+    "comments": [
+      {
+        "name": "Sarah Kim",
+        "comment": "Love this post! Mindfulness has helped me reduce stress"
+      },
+      {
+        "name": "John Smith",
+        "comment": "Great article, thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "postTitle": "The Top 5 Books for Personal Growth",
+    "postDesc": "Get inspired and motivated with these must-reads",
+    "postAuthor": "David Lee",
+    "comments": [
+      {
+        "name": "Emily Wong",
+        "comment": "Great list! The 7 Habits of Highly Effective People is a favorite of mine"
+      },
+      {
+        "name": "Kevin Johnson",
+        "comment": "Awesome recommendations, thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "postTitle": "The Importance of Building Relationships",
+    "postDesc": "Why nurturing relationships is crucial for success",
+    "postAuthor": "Sarah Taylor",
+    "comments": [
+      {
+        "name": "John Brown",
+        "comment": "So true! Building relationships has helped me achieve my goals"
+      },
+      {
+        "name": "Emily Patel",
+        "comment": "Great reminder, thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "postTitle": "The Benefits of Learning a New Skill",
+    "postDesc": "Discover the power of expanding your knowledge",
+    "postAuthor": "Kevin White",
+    "comments": [
+      {
+        "name": "Mike Davis",
+        "comment": "Love this post! Learning a new skill has helped me stay motivated"
+      },
+      {
+        "name": "Jane Wilson",
+        "comment": "Great article, thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "postTitle": "The Top 5 Productivity Apps for Students",
+    "postDesc": "Get more done with these essential tools",
+    "postAuthor": "Emily Chen",
+    "comments": [
+      {
+        "name": "Sarah Lee",
+        "comment": "Awesome list! Evernote is my favorite app"
+      },
+      {
+        "name": "John Smith",
+        "comment": "Great recommendations, thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "postTitle": "The Importance of Setting Boundaries",
+    "postDesc": "Why setting limits is crucial for mental health",
+    "postAuthor": "David Kim",
+    "comments": [
+      {
+        "name": "Emily Patel",
+        "comment": "So true! Setting boundaries has helped me prioritize my well-being"
+      },
+      {
+        "name": "Kevin White",
+        "comment": "Great article, thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "postTitle": "The Benefits of Practicing Gratitude",
+    "postDesc": "Discover the power of focusing on the positive",
+    "postAuthor": "Sarah Taylor",
+    "comments": [
+      {
+        "name": "John Lee",
+        "comment": "Love this post! Practicing gratitude has helped me stay positive"
+      },
+      {
+        "name": "Emily Wong",
+        "comment": "Great article, thanks for sharing!"
+      }
+    ]
+  }
+]
