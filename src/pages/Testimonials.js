@@ -1,11 +1,14 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect, useState } from "react";
-import { FiSearch } from "react-icons/fi";
+import { HiSearch } from "react-icons/hi";
+import UserView from "../components/UserView";
+import { useNavigate } from "react-router-dom";
 
 function Testimonials() {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
   const [result, setResult] = useState([]);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { value } = e.target;
@@ -14,17 +17,15 @@ function Testimonials() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // findUserById(search);
-    console.log(search);
-  };
+    let searchData = users.filter((user) =>
+      user.name.toLowerCase().includes(search.toLowerCase())
+    );
+    setResult(searchData);
+    setSearch("");
+    const resultData = [...searchData];
+    navigate("/search", { state: {"result": resultData, "searchValue": search} });
 
-  // create a function to fetch a single user
-//   const findUserById = (id) => {
-//     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-//       .then((response) => response.json())
-//       .then((response) => console.log(response.json()))
-//       .catch((e) => console.log(e));
-//   };
+  };
 
   // create a function to fetch all users from the REST API
   const fetchUsers = () => {
@@ -34,73 +35,36 @@ function Testimonials() {
       .catch((e) => console.log(e));
   };
   useEffect(fetchUsers, []);
-  console.log(users);
-//   console.log('result: ', result)
   return (
     <div className="container p-3">
-      <button
-        className="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#searchModal"
+      <form
+        onSubmit={handleSubmit}
+        className="d-flex justify-content-center align-items-between"
       >
-        Find User
-      </button>
-      {/* <a href='#searchModal' data-bs-toggle='modal' className="btn btn-primary">Find User</a> */}
-      <div className="modal" id="searchModal">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h4 className="modal-title">Search for user with id</h4>
-              <button className="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div className="modal-body">
-              <form onSubmit={handleSubmit}>
-                <input
-                  type="number"
-                  value={search.name}
-                  onChange={handleChange}
-                  name="search"
-                  className="form-control my-3"
-                  placeholder="Search... "
-                />
-                <button className="btn btn-success" type="submit">
-                  Search
-                  <FiSearch className="ms-1" />
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="row g-4 my-3">
-        {users.map(({ id, name, username, phone, email }) => (
-          <div className="col-4" key={id}>
-            <div className="card">
-              <div
-                className="card-img-top movie_poster overflow-hidden"
-                style={{
-                  objectFit: "cover",
-                }}
-              >
-                <img
-                  src={`https://picsum.photos/350/200?random=${Math.floor(
-                    Math.random() * 31
-                  )}`}
-                  className="img-fluid"
-                  alt="Card image cap"
-                />
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">{name}</h5>
-                <p className="card-text text-italic">{username}</p>
-                <p className="card-text text-italic">{phone}</p>
-                <p className="card-text text-italic">{email}</p>
-                <button className="card-link btn btn-primary">Read More</button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+        <input
+          id="search"
+          type="search"
+          getElementById="search"
+          name="search"
+          onChange={handleChange}
+          value={search}
+          className="form-control w-25 me-2"
+          style={{ display: "none" }}
+        />
+      </form>
+        <button
+          className="btn btn-outline-success rounded-circle"
+          onClick={() => {
+            const searchInput = document.getElementById("search");
+            if (searchInput) {
+              searchInput.style.display = "block";
+            }
+            searchInput.style.display = "block";
+          }}
+        >
+          <HiSearch />
+        </button>
+      <UserView users={users} />
     </div>
   );
 }

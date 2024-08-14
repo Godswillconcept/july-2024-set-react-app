@@ -1,9 +1,10 @@
-import React, { useContext } from 'react'
-import Login from '../pages/Login';
-import { UserContext } from '../contexts/userContext';
+import React, { useContext } from "react";
+import { UserContext } from "../contexts/userContext";
+import { Navigate } from "react-router-dom";
 
 function RouteGuard({ component: Component }) {
-    const { user } = useContext(UserContext);
-    return user ? <Component /> : <Login />;
-  }
-export default RouteGuard
+  const { user } = useContext(UserContext);
+  return user ? <Component /> : <Navigate to="/login" />;
+}
+
+export default RouteGuard;

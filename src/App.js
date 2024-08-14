@@ -16,13 +16,17 @@ import Departments from "./pages/Department";
 import Portfolio from "./pages/Portfolio";
 import Facilities from "./pages/Facilities";
 import Statistics from "./pages/Statistics";
+import SearchView from "./pages/SearchView";
 import Login from "./pages/Login";
-import { UserContext, UserProvider } from "./contexts/userContext";
+import { UserProvider } from "./contexts/userContext";
 import RouteGuard from "./routes/RouteGuard";
 import useFetch from "./components/useFetch";
+import DetailInfo from "./pages/DetailInfo";
 
 function App() {
-  const [data] = useFetch('https://fakestoreapi.com/products/category/electronics');
+  const [data] = useFetch(
+    "https://fakestoreapi.com/products/category/electronics"
+  );
   console.log("data from app: ", data);
   return (
     <UserProvider>
@@ -32,13 +36,22 @@ function App() {
             <Route index element={<RouteGuard component={Home} />} />
             <Route path="/about" element={<RouteGuard component={About} />} />
             <Route path="/teams" element={<RouteGuard component={Teams} />} />
-            <Route path="/contact" element={<RouteGuard component={Contact} />} />
-            <Route path="/services" element={<RouteGuard component={Services} />} />
+            <Route
+              path="/contact"
+              element={<RouteGuard component={Contact} />}
+            />
+            <Route
+              path="/services"
+              element={<RouteGuard component={Services} />}
+            />
             <Route
               path="/testimonials"
               element={<RouteGuard component={Testimonials} />}
             />
-            <Route path="/gallery" element={<RouteGuard component={Gallery} />} />
+            <Route
+              path="/gallery"
+              element={<RouteGuard component={Gallery} />}
+            />
             <Route
               path="/departments"
               element={<RouteGuard component={Departments} />}
@@ -56,6 +69,8 @@ function App() {
               element={<RouteGuard component={Statistics} />}
             />
             <Route path="/login" element={<Login />} />
+            <Route path="/search" element={<SearchView />} />
+            <Route path="/testimonials/:userId?/detail" element={<DetailInfo />} />
             <Route path="*" element={<RouteGuard component={NotFound} />} />
           </Route>
         </Routes>
@@ -63,8 +78,6 @@ function App() {
     </UserProvider>
   );
 }
-
-
 
 export default App;
 
@@ -74,4 +87,3 @@ export default App;
 
 // api endpoint for gallery
 // https://picsum.photos/v2/list
-
